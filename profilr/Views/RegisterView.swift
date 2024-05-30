@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RegisterView: View {
+	@Environment(\.colorScheme) var colorScheme
+	
     @State private var email: String = ""
     @State private var username: String = ""
     @State private var password: String = ""
@@ -67,10 +69,10 @@ struct RegisterView: View {
             }) {
                 Text("Créer mon compte")
                     .font(.headline)
-                    .foregroundColor(.white)
+					.foregroundColor(colorScheme == .dark ? Color.black : Color.white)
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(.black)
+					.background(colorScheme == .dark ? Color.white : Color.black)
                     .cornerRadius(10)
             }
             .padding(.top, 20)
@@ -87,9 +89,8 @@ struct RegisterView: View {
             .font(.subheadline)
             .padding(.top, 10)
 			
-			Spacer()
         }
-        .padding()
+        .padding(30)
     }
 }
 
