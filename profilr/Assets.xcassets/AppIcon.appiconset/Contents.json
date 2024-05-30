@@ -1,11 +1,7 @@
 {
   "images" : [
     {
-<<<<<<< HEAD
       "filename" : "1024x1024.png",
-=======
-      "filename" : "ProfilR_logo.png",
->>>>>>> dev
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
