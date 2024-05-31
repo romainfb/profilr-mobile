@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct profilrApp: App {
+	let userViewModel = UserViewModel()
+	@State var showBio = false
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			AccueilView(viewModel: userViewModel, showBio: $showBio)
         }
     }
 }
